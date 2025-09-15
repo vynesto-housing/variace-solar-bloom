@@ -10,6 +10,30 @@ All colors MUST be HSL.
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    
+    /* Variace Solar Brand Colors */
+    --solar-yellow: 51 100% 50%;
+    --solar-green: 146 52% 36%;
+    --solar-blue: 220 75% 30%;
+    
+    /* Enhanced color palette */
+    --solar-yellow-light: 51 100% 85%;
+    --solar-green-light: 146 52% 65%;
+    --solar-blue-light: 220 75% 65%;
+    
+    /* Gradients */
+    --gradient-solar: linear-gradient(135deg, hsl(var(--solar-yellow)), hsl(var(--solar-green)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--solar-blue)), hsl(var(--solar-green)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--solar-yellow-light)));
+    
+    /* Shadows */
+    --shadow-solar: 0 10px 30px -10px hsl(var(--solar-yellow) / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(var(--solar-blue) / 0.15);
+    --shadow-hero: 0 20px 60px -10px hsl(var(--solar-blue) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,11 +41,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--solar-blue);
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--solar-green);
+    --secondary-foreground: 0 0% 100%;
+    
+    --solar-accent: var(--solar-yellow);
+    --solar-accent-foreground: var(--solar-blue);
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;

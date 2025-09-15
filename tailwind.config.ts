@@ -27,6 +27,16 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        solar: {
+          yellow: "hsl(var(--solar-yellow))",
+          green: "hsl(var(--solar-green))",
+          blue: "hsl(var(--solar-blue))",
+          "yellow-light": "hsl(var(--solar-yellow-light))",
+          "green-light": "hsl(var(--solar-green-light))",
+          "blue-light": "hsl(var(--solar-blue-light))",
+          accent: "hsl(var(--solar-accent))",
+          "accent-foreground": "hsl(var(--solar-accent-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -58,6 +68,16 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        'gradient-solar': 'var(--gradient-solar)',
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      boxShadow: {
+        'solar': 'var(--shadow-solar)',
+        'card': 'var(--shadow-card)',
+        'hero': 'var(--shadow-hero)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,10 +100,25 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "glow": {
+          "0%": { boxShadow: "0 0 20px hsl(var(--solar-yellow) / 0.5)" },
+          "100%": { boxShadow: "0 0 40px hsl(var(--solar-yellow) / 0.8)" },
+        },
+        "slideUp": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "slide-up": "slideUp 0.6s ease-out",
       },
     },
   },
